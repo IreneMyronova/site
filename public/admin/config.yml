@@ -1,11 +1,11 @@
 backend:
   name: git-gateway
-  repo: Irene-IT/ireneM
+  repo: IreneMyronova/site
   branch: main
-  identity_url: https://auth.decapbridge.com/sites/da1c70a0-93c0-4c63-ae9c-6327d07f4d34
+  identity_url: https://auth.decapbridge.com/sites/77cc9706-ee39-45fe-9497-05e81b229df4
   gateway_url: https://gateway.decapbridge.com
-  publish_hook: https://api.netlify.com/build_hooks/68bae1b69f578c4a72db9b20
 
+  publish_hook: https://api.netlify.com/build_hooks/68bae1b69f578c4a72db9b20
 
 # local_backend: true
 
