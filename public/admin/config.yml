@@ -1,0 +1,184 @@
+backend:
+  name: git-gateway
+  repo: Irene-IT/ireneM
+  branch: main
+  identity_url: https://auth.decapbridge.com/sites/da1c70a0-93c0-4c63-ae9c-6327d07f4d34
+  gateway_url: https://gateway.decapbridge.com
+  publish_hook: https://api.netlify.com/build_hooks/68bae1b69f578c4a72db9b20
+
+
+# local_backend: true
+
+# publish_mode: editorial_workflow
+
+editor:
+  # ##### original have false
+  preview: true
+
+# Better Decap + Bridge logo (optional)
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+
+# Add site links in DecapCMS (optional)
+site_url: https://irenemyronova.netlify.app
+
+
+display_url: https://irenemyronova.netlify.app # This url will display in the top-right of the CMS
+media_folder: 'public/media' # Media files will be stored in the repo under static/media
+public_folder: '/media' # The src attribute for uploaded media will begin with /media
+collections:
+  - name: 'hero'
+    label: 'Hero'
+    files:
+      - file: 'content/hero/home.md'
+        label: 'Home'
+        name: 'home'
+        fields:
+          - { label: 'Title', name: 'title', widget: string }
+          - { label: 'Description', name: 'description', widget: 'text' }
+
+      - file: 'content/hero/about.md'
+        label: 'About'
+        name: 'about'
+        fields:
+          - { label: 'Title', name: 'title', widget: string }
+          - { label: 'Description', name: 'description', widget: 'text' }
+          - { label: 'CTA Label', name: 'cta_label', widget: string }
+          - { label: 'CTA Link', name: 'cta_link', widget: string }
+          - { label: 'Featured Photo', name: 'photo', widget: 'image', choose_url: false }
+       
+
+  - name: 'services' # Used in routes, e.g., /admin/services/service
+    label: 'Services' # Used in the UI
+    folder: 'content/services' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this services
+    slug: '{{year}}-{{month}}-{{day}}-{{title}}' # Filename template, e.g., 2025-090-25-name-of-doc.md
+    view_groups:
+      - label: Year
+        field: date
+        pattern: \d{4}
+    fields: # The fields for each document, usually in front matter
+      - {
+          label: 'Template Key', # This field is used to "group" the posts by category
+          name: 'templateKey',
+          widget: 'hidden', # It should be an `hidden` field
+          default: 'service', # The value for this field should be the same for all documents in the collection
+        }
+      - { label: 'Title', name: 'title', widget: string }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Featured', name: 'featured', widget: boolean, default: false }
+      - {
+          label: 'Featured Image',
+          name: 'image',
+          widget: 'image',
+          choose_url: false,
+        }
+      - {
+          label: 'Body',
+          name: 'body',
+          widget: 'markdown',
+          sanitize_preview: true,
+        }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Intro Text', name: 'introText', widget: 'markdown', required: false }
+  
+  - name: 'work'
+    label: 'My works'
+    folder: 'content/work'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{title}}'
+    extension: md
+    format: frontmatter
+    view_groups:
+      - label: Year
+        field: date
+        pattern: \d{4}
+    fields:
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'work',
+        }
+      - { label: 'Title', name: 'title', widget: string }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Featured', name: 'featured', widget: boolean, default: false }
+      - {
+          label: 'Featured Image',
+          name: 'image',
+          widget: 'image',
+          choose_url: false,
+        }
+      - {
+        label: 'Original PDF',
+        name: 'originalPdf',
+        widget: 'file',
+        allow_multiple: false,
+        required: false,
+        }
+      - {
+        label: 'Update PDF',
+        name: 'updatePdf',
+        widget: 'file',
+        allow_multiple: false,
+        required: false,
+        }
+      - {
+          label: 'Body',
+          name: 'body',
+          widget: 'markdown',
+          sanitize_preview: true,
+          minimal: true,
+        }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Intro Text', name: 'introText', widget: 'markdown', required: false }
+
+  - name: 'testimonials'
+    label: 'Testimonials'
+    folder: 'content/testimonials'
+    create: true
+    slug: '{{title}}'
+    fields:
+    - { label: 'Title', name: 'title', widget: string }
+    - { label: 'Role', name: 'role', widget: string }
+    - { label: 'Avatar', name: 'avatar', widget: image, choose_url: false }
+    - { label: 'Featured', name: 'featured', widget: boolean, default: true }
+    - {
+          label: 'Testimonial',
+          name: 'testimonial',
+          widget: 'markdown',
+          sanitize_preview: true,
+          minimal: true,
+        }
+
+  - name: 'faq'
+    label: 'FAQ'
+    folder: 'content/faq'
+    create: true
+    slug: '{{title}}'
+    fields:
+    - { label: 'Question', name: 'question', widget: string }
+    - {
+          label: 'Answer',
+          name: 'answer',
+          widget: 'markdown',
+          sanitize_preview: true,
+          minimal: true,
+        }
+
+  - name: 'contacts'
+    label: 'Contacts'
+    folder: 'content/contacts'
+    create: true
+    slug: '{{title}}'
+    fields:
+      - {
+          label: 'Template Key',
+          name: 'templateKey',
+          widget: 'hidden',
+          default: 'contacts',
+        }
+      - { label: 'Title', name: 'title', widget: string }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Featured', name: 'featured', widget: boolean, default: false }
+      - { label: 'Link', name: 'link', widget: string }
+     

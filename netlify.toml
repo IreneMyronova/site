@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# --- WWW → non-WWW redirect ---
+[[redirects]]
+  from = "https://www.irenemyronova.netlify.app/*"
+  to = "https://irenemyronova.netlify.app/:splat"
+  status = 301
+  force = true
