@@ -4,7 +4,7 @@ backend:
   branch: main
   identity_url: https://auth.decapbridge.com/sites/77cc9706-ee39-45fe-9497-05e81b229df4
   gateway_url: https://gateway.decapbridge.com
-  publish_hook: https://api.netlify.com/build_hooks/68f74f7c53e83c9318f818eb
+  publish_hook: https://api.netlify.com/build_hooks/68f76a9b2b05fff56b4b100b
 
 # local_backend: true
 
