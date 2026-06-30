@@ -256,12 +256,18 @@ export default function About() {
       <div className="flex flex-col-reverse xl:flex-row items-center xl:items-stretch justify-center xl:justify-between w-full max-w-8xl gap-4 [@media(min-width:361px)_and_(min-height:741px)]:gap-10 xl:gap-0 z-10">
         {/* text */}
         <div className="flex-1 flex flex-col justify-center gap-4 [@media(min-width:361px)_and_(min-height:741px)]:gap-6 xl:gap-8 text-center xl:text-left">
-          <h1
-            id="about-title"
-            className="text-3xl sm:text-4xl font-bold leading-tight text-balance"
-          >
-            {about?.title}
-          </h1>
+         <h1
+  id="about-title"
+  className="text-3xl sm:text-4xl font-bold leading-tight text-balance"
+>
+  <span className="block">{about?.title}</span>
+
+  {about?.specialties && (
+    <span className="block mt-3 text-xl sm:text-2xl font-medium">
+      {about.specialties}
+    </span>
+  )}
+</h1>
 
           <p className="text-lg text-slate-600 dark:text-[#a0b6dc] text-balance">
             {about?.description}
