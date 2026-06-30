@@ -12,6 +12,10 @@ const Hero = defineDocumentType(() => ({
       type: 'string',
       required: true,
     },
+    specialties: {
+  type: 'string',
+  required: false,
+},
     description: {
       type: 'string',
       required: false,
