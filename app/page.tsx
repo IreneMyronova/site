@@ -11,7 +11,6 @@ import Link from 'next/link'
 import Hero from './hero/page'
 import ServiceCardPost from '../components/cards/ServicePostCard'
 import WorkPostCard from '../components/cards/WorkPostCard'
-import TestimonialSlider from '../components/TestimonialSlider'
 import FAQSection from '../components/FAQSection'
 import ContactsSection from '../components/ContactsSection'
 
@@ -117,20 +116,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        id="testimonials"
-        className="scroll-mt-30 flex flex-col items-center justify-center gap-8"
-      >
-        <h2
-          id="testimonials-heading"
-          className="text-2xl sm:text-3xl font-bold flex items-center gap-3"
-        >
-          What my clients say
-        </h2>
-        <div className="flex min-h-[350px] w-full justify-center items-center">
-          <TestimonialSlider ariaLabelledby="testimonials-heading" />
-        </div>
-      </section>
       <section
         id="faq"
         className="scroll-mt-30 flex flex-col items-center justify-center gap-4"
