@@ -33,7 +33,6 @@ collections:
         name: 'home'
         fields:
           - { label: 'Title', name: 'title', widget: string }
-          - { label: 'Specialties', name: 'specialties', widget: string }
           - { label: 'Description', name: 'description', widget: 'text' }
 
       - file: 'content/hero/about.md'
@@ -41,6 +40,7 @@ collections:
         name: 'about'
         fields:
           - { label: 'Title', name: 'title', widget: string }
+          - { label: 'Specialties', name: 'specialties', widget: string }
           - { label: 'Description', name: 'description', widget: 'text' }
           - { label: 'CTA Label', name: 'cta_label', widget: string }
           - { label: 'CTA Link', name: 'cta_link', widget: string }
