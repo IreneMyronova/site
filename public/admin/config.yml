@@ -33,6 +33,7 @@ collections:
         name: 'home'
         fields:
           - { label: 'Title', name: 'title', widget: string }
+          - { label: 'Specialties', name: 'specialties', widget: string }
           - { label: 'Description', name: 'description', widget: 'text' }
 
       - file: 'content/hero/about.md'
