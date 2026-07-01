@@ -1,16 +1,13 @@
 ---
 templateKey: work
-title: >
-  Research: Leveraging Eﬀective Incident Management
-date: 2025-09-19T15:04:10.000Z
+title: "Leveraging Eﬀective Incident Management: Processes and Tools to Minimize
+  Downtime"
+description: |
+  A Comprehensive Guide for an Estonia-Based Startup PingHome
 featured: true
-description: >
-  This work focused on Processes And Tools To Minimize Downtime.
-  Result - 1000+ 
-image: /media/work__Incident-Management_Pinghome.png
+image: /media/screenshot-2026-07-01-181517.png
 originalPdf: /media/Incident-Management_Pinghome.pdf
-updatePdf: 
+updatePdf: null
+date: 2026-07-01T18:15:00.000+02:00
 ---
-## Leveraging Eﬀective Incident Management: Processes And Tools To Minimize Downtime
-
-Feel free to replace this content with your own!
+Full PDF File ->
