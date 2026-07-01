@@ -151,7 +151,25 @@ main {
   padding: 0.25rem 1.5rem;
   font-style: italic;
 }
+.blog-post a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
 
+.blog-post a:hover {
+  color: #1d4ed8;
+}
+
+.dark .blog-post a {
+  color: #93c5fd;
+}
+
+.dark .blog-post a:hover {
+  color: #bfdbfe;
+}
 .blog-post ul li > a {
   padding: 0.6ch 0;
 }
