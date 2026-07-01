@@ -1,16 +1,11 @@
 ---
 templateKey: work
-title: >
-  Article for Data Software & Development
-date: 2025-09-19T15:04:10.000Z
+title: Blog Post for a Kyiv-based IT Outsourcing Company
+description: "\n"
 featured: true
-description: >
-  This work focused on ........
-  Result - 1000+ reads
-image: /media/work__Data-Visual-Software_Gearheart.png
+image: /media/screenshot-2026-07-01-180001.png
 originalPdf: /media/Data-Visual-Software_Gearheart.pdf
-updatePdf: 
+updatePdf: null
+date: 2026-07-01T18:01:00.000+02:00
 ---
-## How to build Software for Data visualiation
-
-How to choose the Development team: inhouse, freelance or agency!
+## How to Build a Custom Data Visualization Software
