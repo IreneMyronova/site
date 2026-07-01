@@ -1,6 +1,6 @@
 ---
 templateKey: work
-title: Interview with a Polish Government Representative on Industry 4.0
+title: Interview with the Polish Government Representative on Industry 4.0
 description: >
   Andrzej Soldaty, head of the Polish government’s Industry 4.0 implementation
   project, discusses industrial reform in Eastern European countries.
